@@ -1,4 +1,4 @@
-package org.vstoynev.voila;
+package org.vstoynev.viola;
 
 import javax.validation.Validator;
 
