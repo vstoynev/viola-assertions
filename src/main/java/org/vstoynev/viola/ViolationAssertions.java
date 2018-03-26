@@ -1,12 +1,10 @@
 package org.vstoynev.viola;
 
-import javax.validation.ConstraintViolation;
+import java.lang.annotation.Annotation;
 
-public class ViolationAssertions<T> {
+public interface ViolationAssertions<T> {
 
-	private final ConstraintViolation<T> violation;
+	ViolationAssertions<T> withMessage(String expected);
 
-	public ViolationAssertions(ConstraintViolation<T> violation) {
-		this.violation = violation;
-	}
+	void asResultOfTypeHavingConstraint(Class<? extends Annotation> expectedAnnotationType);
 }
