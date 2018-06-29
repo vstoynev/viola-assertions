@@ -1,4 +1,4 @@
-package org.vstoynev.viola.junit4.rules;
+package org.vstoynev.viola.junit4.rule;
 
 import javax.validation.Validator;
 
@@ -10,7 +10,7 @@ public abstract class AbstractValidatorRule implements ValidatorRule {
 	private Validator validator = null;
 
 	@Override
-	public Statement apply(Statement base, Description description) {
+	public final Statement apply(Statement base, Description description) {
 		return new Statement() {
 
 			@Override
@@ -26,7 +26,7 @@ public abstract class AbstractValidatorRule implements ValidatorRule {
 
 	public final Validator getValidator() {
 		if (validator == null) {
-			throw new IllegalStateException("validator is not yet created");
+			throw new IllegalStateException("validator is not yet initialized!");
 		}
 
 		return validator;

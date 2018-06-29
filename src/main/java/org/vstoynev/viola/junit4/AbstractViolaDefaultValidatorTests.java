@@ -4,7 +4,7 @@ import org.junit.ClassRule;
 import org.vstoynev.viola.Assertions;
 import org.vstoynev.viola.BeanAssertions;
 import org.vstoynev.viola.ViolationAssertions;
-import org.vstoynev.viola.junit4.rules.DefaultValidatorRule;
+import org.vstoynev.viola.junit4.rule.DefaultValidatorRule;
 
 public abstract class AbstractViolaDefaultValidatorTests implements BeanAssertions {
 

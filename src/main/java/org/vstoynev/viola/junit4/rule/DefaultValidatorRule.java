@@ -1,4 +1,4 @@
-package org.vstoynev.viola.junit4.rules;
+package org.vstoynev.viola.junit4.rule;
 
 import javax.validation.Validation;
 import javax.validation.Validator;

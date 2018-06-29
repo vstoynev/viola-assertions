@@ -2,7 +2,7 @@ package org.vstoynev.viola;
 
 import javax.validation.Validator;
 
-import org.vstoynev.viola.junit4.rules.ValidatorRule;
+import org.vstoynev.viola.junit4.rule.ValidatorRule;
 
 public abstract class Assertions {
 
