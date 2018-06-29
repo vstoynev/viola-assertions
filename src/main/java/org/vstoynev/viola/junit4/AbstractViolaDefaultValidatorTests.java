@@ -5,11 +5,12 @@ import org.vstoynev.viola.Assertions;
 import org.vstoynev.viola.BeanAssertions;
 import org.vstoynev.viola.ViolationAssertions;
 import org.vstoynev.viola.junit4.rule.DefaultValidatorRule;
+import org.vstoynev.viola.junit4.rule.ValidatorRule;
 
 public abstract class AbstractViolaDefaultValidatorTests implements BeanAssertions {
 
 	@ClassRule
-	public static DefaultValidatorRule validatorRule = new DefaultValidatorRule();
+	public static ValidatorRule validatorRule = new DefaultValidatorRule();
 
 	@Override
 	public <T> void assertNoViolationsFor(T bean, Class<?>... groups) {
