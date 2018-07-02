@@ -5,6 +5,8 @@ import java.util.Set;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 
+import org.vstoynev.viola.error.AssertionErrors;
+
 class DefaultBeanAssertions implements BeanAssertions {
 
 	private final Validator validator;
@@ -18,7 +20,7 @@ class DefaultBeanAssertions implements BeanAssertions {
 		Set<ConstraintViolation<T>> violations = validator.validate(bean, groups);
 
 		if ((violations != null) && !violations.isEmpty()) {
-			throw new AssertionError("Expected no violations but actual count is " + violations.size());
+			AssertionErrors.throwWithMessage("Expected no violations but actual count is " + violations.size());
 		}
 	}
 
@@ -28,7 +30,7 @@ class DefaultBeanAssertions implements BeanAssertions {
 
 		int violationsCount = (violations == null) ? 0 : violations.size();
 		if (violationsCount != 1) {
-			throw new AssertionError("Expected single violations but actual count is " + violationsCount);
+			AssertionErrors.throwWithMessage("Expected single violations but actual count is " + violationsCount);
 		}
 
 		return new DefaultViolationAssertions<>(violations.iterator().next());
