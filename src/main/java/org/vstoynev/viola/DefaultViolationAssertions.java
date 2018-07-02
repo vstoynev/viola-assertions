@@ -34,4 +34,28 @@ public class DefaultViolationAssertions<T> implements ViolationAssertions<T> {
 							+ propertyPath + " having constraint of type + " + annotation.getClass().getCanonicalName());
 		}
 	}
+
+	@Override
+	public PropertyAssertions<T> asResultOfPropertyWithPath(String expectedPath) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PropertyValueAssertions<T> asResultOfValueOfPropertyWithPath(String expectedPath) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PropertyAssertions<T> asResultOfElementsOfListWithPath(String expectedPath) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CollectionAssertions<T> asResultOfCollectionWithPath(String expectedPath) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
