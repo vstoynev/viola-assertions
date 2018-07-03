@@ -10,8 +10,8 @@ public class AssertionErrorsTests {
 	@Test
 	public void throwWithMessageCleansUpStackTrace() {
 		assertThatExceptionOfType(AssertionError.class).isThrownBy(() -> AssertionErrors.throwWithMessage("asd")).satisfies(error -> {
-			assertThat(error.getStackTrace()).isNotNull().isNotEmpty();
-			assertThat(error.getStackTrace()[0].getClassName()).doesNotStartWith("org.vstoynev.viola");
+			assertThat(error.getStackTrace()).isNotNull().isNotEmpty().allSatisfy(
+							stackTraceElement -> assertThat(stackTraceElement.getClassName()).doesNotStartWith("org.vstoynev.viola"));
 		});
 	}
 }

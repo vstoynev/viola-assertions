@@ -4,11 +4,11 @@ import java.lang.annotation.Annotation;
 
 import javax.validation.ConstraintViolation;
 
-public class DefaultViolationAssertions<T> implements ViolationAssertions<T> {
+class DefaultViolationAssertions<T> implements ViolationAssertions<T> {
 
 	private final ConstraintViolation<T> violation;
 
-	public DefaultViolationAssertions(ConstraintViolation<T> violation) {
+	DefaultViolationAssertions(ConstraintViolation<T> violation) {
 		this.violation = violation;
 	}
 

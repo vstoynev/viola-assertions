@@ -3,7 +3,7 @@ package org.vstoynev.viola.error;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AssertionErrors {
+public abstract class AssertionErrors {
 
 	private static final String BASE_PACKAGE = "org.vstoynev.viola";
 

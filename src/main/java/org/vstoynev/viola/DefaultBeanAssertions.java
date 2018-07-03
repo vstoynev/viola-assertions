@@ -11,7 +11,7 @@ class DefaultBeanAssertions implements BeanAssertions {
 
 	private final Validator validator;
 
-	public DefaultBeanAssertions(Validator validator) {
+	DefaultBeanAssertions(Validator validator) {
 		this.validator = validator;
 	}
 
