@@ -10,7 +10,7 @@ import org.vstoynev.viola.ViolationAssertions;
 
 public abstract class AbstractTestNGViolaDefaultValidatorTests implements BeanAssertions {
 
-	private Validator validator = null;
+	protected Validator validator = null;
 
 	@BeforeClass(alwaysRun = true)
 	protected void initializeValidator() throws Exception {
