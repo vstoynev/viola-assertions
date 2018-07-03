@@ -28,7 +28,7 @@ class DefaultViolationAssertions<T> implements ViolationAssertions<T> {
 		String propertyPath = violation.getPropertyPath().toString();
 		Annotation annotation = violation.getConstraintDescriptor().getAnnotation();
 
-		if (!propertyPath.isEmpty() || !expectedAnnotationType.isInstance(annotation)) {
+		if (!propertyPath.isEmpty() || !expectedAnnotationType.equals(annotation.getClass())) {
 			throw new AssertionError("Expected violation as result of " + violation.getRootBeanClass().getCanonicalName()
 							+ " having constraint of type " + expectedAnnotationType.getCanonicalName() + " but the actual reason is: "
 							+ propertyPath + " having constraint of type + " + annotation.getClass().getCanonicalName());
